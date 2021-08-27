@@ -1,11 +1,11 @@
-defmodule GenReport.ParserTest do
+defmodule ReportsGenerator.ParserTest do
   use ExUnit.Case
 
-  alias GenReport.Parser
+  alias ReportsGenerator.Parser
 
   describe "parse_file/1" do
     test "parses the file" do
-      file_name = "gen_report.csv"
+      file_name = "report.csv"
 
       response =
         file_name

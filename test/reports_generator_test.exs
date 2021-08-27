@@ -1,20 +1,19 @@
-defmodule GenReportTest do
+defmodule ReportsGeneratorTest do
   use ExUnit.Case
 
-  alias GenReport
-  alias GenReport.Support.ReportFixture
+  alias ReportsGenerator.Support.ReportFixture
 
-  @file_name "gen_report.csv"
+  @file_name "report.csv"
 
   describe "build/1" do
     test "When passing file name return a report" do
-      response = GenReport.build(@file_name)
+      response = ReportsGenerator.build(@file_name)
 
       assert response == ReportFixture.build()
     end
 
     test "When no filename was given, returns an error" do
-      response = GenReport.build()
+      response = ReportsGenerator.build()
 
       assert response == {:error, "Insira o nome de um arquivo"}
     end

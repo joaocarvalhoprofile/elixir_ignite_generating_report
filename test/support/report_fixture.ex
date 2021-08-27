@@ -1,4 +1,4 @@
-defmodule GenReport.Support.ReportFixture do
+defmodule ReportsGenerator.Support.ReportFixture do
   def build do
     %{
       "all_hours" => %{
